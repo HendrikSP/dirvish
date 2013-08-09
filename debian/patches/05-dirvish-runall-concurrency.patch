@@ -12,7 +12,7 @@ Index: dirvish-1.2.1/dirvish-runall.pl
  sub loadconfig;
 @@ -94,22 +95,63 @@ else
  }
- $$Config{Dirvish} ||= 'dirvish';
+ $$Config{Dirvish} ||= '/usr/sbin/dirvish';
  
 +$$Config{concurrent} ||= '1';
 +@pidList = ();
