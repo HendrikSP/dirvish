@@ -1,3 +1,11 @@
+dirvish (1.2.1-1.2-mendix-1) unstable; urgency=low
+
+  * dirvish: add 05-dirvish-runall-concurrency
+  * debian/patches: 04-dirvish-runall-usrsbin.patch changes 17085Config{Dirvish}
+    what is used in 05-dirvish-runall-concurrency.patch
+
+ -- Frank Baalbergen <frank.baalbergen@mendix.com>  Fri, 09 Aug 2013 15:38:35 +0200
+
 dirvish (1.2.1-1.2) unstable; urgency=low
 
   * Non-maintainer upload.
