@@ -2,3 +2,4 @@
 02-rsync-options.patch
 03-dirvish-locate.patch
 04-dirvish-runall-usrsbin.patch
+05-dirvish-runall-concurrency.patch
