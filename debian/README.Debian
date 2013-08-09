@@ -1,0 +1,27 @@
+dirvish for Debian
+------------------
+
+- For (hopefully) helpful instructions how to set up dirvish on your Debian
+  system, see the HOWTO.Debian file.
+
+- Biggest difference with the upstream version of dirvish is that the Debian
+  package installs a default cron script, which runs at 22:04 (feel free to
+  adjust this time, in /etc/cron.d/dirvish).
+  There used to be more differences, but upstream was kind enough to accept
+  many of my patches :-)
+
++ If your system is not running 24/7, you may want to change the cron.d entry
+  into a cron.daily script, so that dirvish will be run by anacron when
+  necessary.
+
+- Upstream installs all the utils into the bin directory. I feel that most
+  of the utils are for the administrator only, hence I've moved them into
+  /usr/sbin .  This is in accordance of the fact that the manpages are in
+  section 8... An exception is dirvish-locate, which can be useful for users,
+  so that is in /usr/bin .
+
+- The upstream INSTALL file is available as HOWTO.upstream, as it covers more
+  than just installation; configuration is also covered.
+
+
+ -- Paul Slootman <paul@debian.org>, Wed, 25 Feb 2004 09:38:17 +0100
