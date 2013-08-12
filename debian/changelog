@@ -1,3 +1,9 @@
+dirvish (1.2.1-1.2+mendix2) unstable; urgency=low
+
+  * dirvish.pl: remove trailing slash in vault
+
+ -- Pim van den Berg <pim.van.den.berg@mendix.com>  Mon, 12 Aug 2013 18:18:11 +0200
+
 dirvish (1.2.1-1.2-mendix-1) unstable; urgency=low
 
   * dirvish: add 05-dirvish-runall-concurrency
