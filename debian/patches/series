@@ -3,3 +3,4 @@
 03-dirvish-locate.patch
 04-dirvish-runall-usrsbin.patch
 05-dirvish-runall-concurrency.patch
+06-remove-trailing-slash-in-vault.patch
