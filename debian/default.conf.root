@@ -1,0 +1,12 @@
+client: thishost
+tree: /
+xdev: 1
+index: gzip
+log: gzip
+image-default: %Y%m%d
+exclude:
+	/var/cache/apt/archives/*.deb
+	/var/cache/man/**
+	/tmp/**
+	/var/tmp/**
+        *.bak
