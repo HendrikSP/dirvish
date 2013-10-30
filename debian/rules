@@ -66,6 +66,7 @@ binary-indep: build install
 	install -m 0755 debian/dirvish-cronjob debian/dirvish/etc/dirvish
 	dh_installcron
 	dh_installman
+	dh_installlogrotate
 	dh_link
 	dh_compress
 	dh_fixperms
