@@ -1,3 +1,11 @@
+dirvish (1.2.1-1.2+mendix3) unstable; urgency=low
+
+  * debian: add gbp.conf for git-buildpackage
+  * debian/patches: add 07-dirvish-expire-exit-code.patch
+  * debian: make cron.d/dirvish log to /var/log/dirvish/nightly.log
+
+ -- Pim van den Berg <pim.van.den.berg@mendix.com>  Wed, 30 Oct 2013 17:20:09 +0100
+
 dirvish (1.2.1-1.2+mendix2) unstable; urgency=low
 
   * dirvish.pl: remove trailing slash in vault
