@@ -1,4 +1,4 @@
-/var/log/dirvish/nightly.log {
+/var/log/dirvish/*.log {
 	weekly
 	rotate 52
 	compress
