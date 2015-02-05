@@ -5,3 +5,4 @@
 05-dirvish-runall-concurrency.patch
 06-remove-trailing-slash-in-vault.patch
 07-dirvish-expire-exit-code.patch
+08-btrfs-snapshots.patch

@@ -1,3 +1,9 @@
+dirvish (1.2.1-1.2+mendix5) unstable; urgency=medium
+
+  * debian/patches: add 08-btrfs-snapshots.patch
+
+ -- Hans van Kranenburg <hans.van.kranenburg@mendix.com>  Sat, 03 Jan 2015 18:20:38 +0100
+
 dirvish (1.2.1-1.2+mendix4) unstable; urgency=low
 
   * debian/logrotate: rotate /var/log/dirvish/*.log
