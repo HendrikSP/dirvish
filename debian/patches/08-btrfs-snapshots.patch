@@ -15,13 +15,18 @@ http://www.dirvish.org/pipermail/dirvish/2010-December/002357.html
 - proper whitespace
 --- a/dirvish-expire.pl
 +++ b/dirvish-expire.pl
-@@ -169,7 +169,12 @@ for $expire (sort {imsort()} @expires)
+@@ -169,7 +169,17 @@ for $expire (sort {imsort()} @expires)
  
  	$$Options{'no-run'} and next;
  
 -	system("rm -rf $$expire{path}/tree");
 +	if ($$Options{btrfs})
 +	{
++		# am I not root?
++		if ($< != 0)
++		{
++			system("btrfs property set -ts $$expire{path}/tree ro false > /dev/null");
++		}
 +		system("btrfs subvolume delete $$expire{path}/tree > /dev/null");
 +	} else {
 +		system("rm -rf $$expire{path}/tree");
@@ -82,13 +87,18 @@ http://www.dirvish.org/pipermail/dirvish/2010-December/002357.html
  
  $rclient = undef;
  $$Options{client} ne $$Options{Server}
-@@ -762,7 +776,12 @@ if ($$Options{'post-server'})
+@@ -762,7 +776,17 @@ if ($$Options{'post-server'})
  
  if($status{fatal})
  {
 -	system ("rm -rf $destree");
 +	if ($$Options{btrfs})
 +	{
++		# am I not root?
++		if ($< != 0)
++		{
++			system("btrfs property set -ts $destree ro false > /dev/null");
++		}
 +		system ("btrfs subvolume delete $destree > /dev/null");
 +	} else {
 +		system ("rm -rf $destree");
@@ -96,7 +106,7 @@ http://www.dirvish.org/pipermail/dirvish/2010-December/002357.html
  	unlink $err_temp;
  	printf SUMMARY "%s: %s\n", 'Status', $Status_msg;
  	exit 199;
-@@ -794,6 +813,8 @@ if ($Status eq 'success')
+@@ -794,6 +818,8 @@ if ($Status eq 'success')
  			);
  		close (HIST);
  	}
